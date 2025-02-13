@@ -36,8 +36,8 @@
 
     <script>
         // Koneksi ke server WebSocket
-        const socket = io('http://localhost:3003');  // Sesuaikan dengan URL server Anda
-    
+        const socket = io('http://rfid-backend-x6h4.onrender.com');  // Sesuaikan dengan URL server Anda
+
         // Menunggu data yang dikirimkan oleh server
         socket.on('rfid-scanned', (data) => {
             console.log('Data diterima dari server:', data);
@@ -50,7 +50,7 @@
                     <td>${data.waktu_scan}</td>
                 </tr>
             `;
-            });
-      </script>
+        });
+    </script>
 </body>
 </html>
