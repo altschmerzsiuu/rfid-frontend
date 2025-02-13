@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,6 @@
         </datalist>
         <button type="submit" id="submit-btn">Tambah Hewan</button>
     </form>
-    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -55,7 +54,8 @@
                     status_kesehatan: statusInput.value
                 };
 
-                fetch("http://localhost:3002/hewan", {
+                // Mengganti URL dengan server yang telah dideploy
+                fetch("http://rfid-backend-x6h4.onrender.com/hewan", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(hewan),
